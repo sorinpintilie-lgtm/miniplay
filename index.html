@@ -30,6 +30,11 @@
                     fontFamily: {
                         sans: ['Nunito', 'sans-serif'],
                         display: ['"Baloo 2"', 'cursive'],
+                    },
+                    boxShadow: {
+                        'toy': '0 8px 0 rgba(0,0,0,0.15)',
+                        'card': '8px 8px 0 #1A535C',
+                        'card-hover': '12px 12px 0 #1A535C',
                     }
                 }
             }
@@ -97,7 +102,7 @@
         /* --- MOBILE MENU --- */
         #mobileMenu {
             position: fixed; inset: 0; z-index: 10000;
-            background: var(--mini-yellow);
+            background: white;
             transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         #mobileMenu.open { transform: translateY(0); }
@@ -131,9 +136,8 @@
 
     <header class="site-header fixed w-full px-4 flex justify-center">
         <div class="bg-white border-2 border-slate-200 rounded-full px-6 py-3 flex justify-between items-center w-full max-w-6xl shadow-md">
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="logoo.png" alt="Miniplay Logo" class="h-10 w-auto group-hover:scale-105 transition-transform">
-                <span class="font-display font-extrabold text-2xl tracking-tight text-mini-dark hidden sm:block">Miniplay</span>
+            <a href="#" class="flex items-center group">
+                <img src="logo.png" alt="Miniplay Logo" class="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform">
             </a>
 
             <nav class="hidden md:flex gap-6 font-display font-bold text-mini-dark text-lg items-center">
@@ -155,7 +159,7 @@
 
     <div id="mobileMenu" class="flex flex-col items-center justify-center gap-8 font-display font-bold text-4xl text-mini-dark">
         <button id="closeMenuBtn" class="absolute top-8 right-8 text-4xl text-mini-dark hover:rotate-90 transition-transform"><i class="fas fa-times"></i></button>
-        <img src="logoo.png" alt="Miniplay Logo" class="h-20 w-auto mb-4">
+        <img src="logo.png" alt="Miniplay Logo" class="h-20 w-auto mb-4">
         <a href="#acasa" class="hover:text-mini-red" onclick="toggleMenu()">Acasă</a>
         <a href="#despre" class="hover:text-mini-teal" onclick="toggleMenu()">Despre Noi</a>
         <a href="#dezvoltare" class="hover:text-mini-purple" onclick="toggleMenu()">Dezvoltare</a>
@@ -164,26 +168,44 @@
     </div>
 
     <section id="acasa" class="pt-32 pb-20 px-4 min-h-[85vh] flex items-center">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="text-center lg:text-left z-10">
-                <h1 class="text-5xl md:text-7xl font-display font-extrabold text-mini-dark leading-tight mb-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center w-full">
+            
+            <div class="w-full lg:w-1/2 flex flex-col z-10 text-center lg:text-left">
+                
+                <h1 class="order-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-mini-dark leading-tight mb-6">
                     Aici creștem fericiți <br>și <span class="text-mini-teal">curajoși!</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-slate-600 font-semibold mb-10 max-w-lg mx-auto lg:mx-0 bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-slate-200">
+                
+                <div class="order-2 lg:hidden relative w-full max-w-sm mx-auto mb-10 mt-2 px-2">
+                    <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Copii la Miniplay" class="img-rounded relative w-full aspect-square z-10 transform rotate-2">
+                    
+                    <div class="absolute -bottom-4 -left-2 bg-white p-3 border border-slate-200 rounded-2xl shadow-lg z-20 flex items-center gap-2 transform -rotate-3">
+                        <div class="w-10 h-10 bg-mini-teal/20 rounded-full flex items-center justify-center shrink-0">
+                            <i class="fas fa-puzzle-piece text-xl text-mini-teal"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-display font-extrabold text-mini-dark text-sm leading-tight">Educație cu blândețe</p>
+                            <p class="text-xs font-bold text-slate-500">Învățăm prin explorare</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="order-3 hidden md:block text-xl md:text-2xl text-slate-600 font-semibold mb-10 max-w-lg mx-auto lg:mx-0 bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-slate-200">
                     Implementăm cele mai bune practici educaționale, îmbinând metodele tradiționale cu cele moderne. O grădiniță dotată la cele mai înalte standarde.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                <div class="order-4 flex justify-center lg:justify-start">
                     <a href="#despre" class="bg-mini-red text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-red-500 hover:-translate-y-1 transition-all text-center">
                         Descoperă Miniplay
                     </a>
                 </div>
             </div>
             
-            <div class="relative mt-12 lg:mt-0 px-4">
+            <div class="w-full lg:w-1/2 relative hidden lg:block px-4">
                 <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Copii la Miniplay" class="img-rounded relative w-full max-w-lg mx-auto aspect-square z-10 transform rotate-2">
                 
                 <div class="absolute -bottom-4 -left-4 bg-white p-4 border border-slate-200 rounded-2xl shadow-lg z-20 flex items-center gap-3 transform -rotate-3 hover:rotate-0 transition-transform">
-                    <div class="w-12 h-12 bg-mini-teal/20 rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg-mini-teal/20 rounded-full flex items-center justify-center shrink-0">
                         <i class="fas fa-puzzle-piece text-2xl text-mini-teal"></i>
                     </div>
                     <div>
@@ -192,6 +214,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -227,8 +250,9 @@
                     
                     <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bucurie" class="img-rounded absolute bottom-0 right-0 w-2/3 h-64 z-20 transform rotate-6">
                     
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 bg-mini-red text-white rounded-full w-24 h-24 flex items-center justify-center font-display font-bold text-xl shadow-lg rotate-12 border-4 border-white">
-                        100% Fun!
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 bg-mini-red text-white rounded-full w-24 h-24 flex flex-col items-center justify-center text-center font-display font-extrabold text-xl leading-none shadow-lg rotate-12 border-4 border-white">
+                        <span>100%</span>
+                        <span>Fun!</span>
                     </div>
                 </div>
 
@@ -295,12 +319,12 @@
     <section id="program" class="py-24 px-4 bg-white">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
             
-            <div>
+            <div class="flex flex-col">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="w-14 h-14 bg-mini-red text-white rounded-2xl flex items-center justify-center text-2xl shadow-sm">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h2 class="text-4xl font-display font-extrabold text-mini-dark leading-tight">Programul Zilei<br><span class="text-xl text-slate-500 font-sans font-bold">Interval: 08:00 - 18:00</span></h2>
+                    <h2 class="text-4xl font-display font-extrabold text-mini-dark leading-tight mb-0">Programul Zilei<br><span class="text-xl text-slate-500 font-sans font-bold">Interval: 08:00 - 18:00</span></h2>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -338,12 +362,12 @@
                     </div>
                     <div class="bg-slate-50 border border-slate-100 p-4 rounded-2xl sm:col-span-2">
                         <div class="text-mini-teal font-extrabold text-lg mb-1">16:00 – 18:00</div>
-                        <p class="font-bold text-slate-600 leading-tight">Gustare, Jocuri de după-amiază & Preluare.</p>
+                        <p class="font-bold text-slate-600 leading-tight mb-0">Gustare, Jocuri de după-amiază & Preluare.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="space-y-6">
+            <div class="flex flex-col justify-end space-y-6 h-full mt-8 lg:mt-0">
                 <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm border-l-8 border-l-mini-yellow">
                     <h3 class="text-2xl font-display font-extrabold text-mini-dark mb-4 flex items-center gap-2">
                         <i class="fas fa-book-open text-mini-yellow"></i> Domenii Experiențiale
@@ -375,7 +399,7 @@
                     <h3 class="text-2xl font-display font-extrabold text-mini-dark mb-3 flex items-center gap-2">
                         <i class="fas fa-bus text-mini-red"></i> Activități Extra
                     </h3>
-                    <p class="font-semibold text-slate-600 text-sm leading-relaxed">
+                    <p class="font-semibold text-slate-600 text-sm leading-relaxed mb-0">
                         Vizite educative constante la Fabrica de pâine, timbre, ciocolată, jucării din lemn, Cofetărie, Aeroport, Teatre, Muzee și Circ, plus serbări școlare și expoziții de artă.
                     </p>
                 </div>
@@ -384,56 +408,56 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-4 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto text-center mb-12">
+    <section id="contact" class="py-20 px-4 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto text-center mb-10">
             <h2 class="text-4xl md:text-5xl font-display font-extrabold text-mini-dark mb-4">Hai să ne cunoaștem!</h2>
             <p class="text-lg font-semibold text-slate-600">Vino să vizitezi Grădinița Miniplay și să descoperi spațiul unde copilul tău va crește frumos.</p>
         </div>
         
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-lg border border-slate-100">
-            <div class="flex flex-col space-y-8">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 shadow-lg border border-slate-100">
+            <div class="flex flex-col space-y-6 md:space-y-8">
                 
-                <div class="space-y-6">
+                <div class="space-y-4 md:space-y-6">
                     <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl">
-                        <div class="w-12 h-12 bg-mini-teal text-white rounded-full flex items-center justify-center text-xl shrink-0 shadow-sm"><i class="fas fa-phone-alt"></i></div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-mini-teal text-white rounded-full flex items-center justify-center text-lg md:text-xl shrink-0 shadow-sm"><i class="fas fa-phone-alt"></i></div>
                         <div>
-                            <h4 class="font-bold text-mini-dark text-sm uppercase tracking-wider">Telefon</h4>
-                            <p class="text-slate-700 font-bold text-lg">0726 582 656</p>
+                            <h4 class="font-bold text-mini-dark text-xs md:text-sm uppercase tracking-wider">Telefon</h4>
+                            <p class="text-slate-700 font-bold text-base md:text-lg">0726 582 656</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl">
-                        <div class="w-12 h-12 bg-mini-red text-white rounded-full flex items-center justify-center text-xl shrink-0 shadow-sm"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <h4 class="font-bold text-mini-dark text-sm uppercase tracking-wider">Email</h4>
-                            <p class="text-slate-700 font-bold text-lg">gradinita.miniplay@gmail.com</p>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-mini-red text-white rounded-full flex items-center justify-center text-lg md:text-xl shrink-0 shadow-sm"><i class="fas fa-envelope"></i></div>
+                        <div class="break-all">
+                            <h4 class="font-bold text-mini-dark text-xs md:text-sm uppercase tracking-wider">Email</h4>
+                            <p class="text-slate-700 font-bold text-base md:text-lg">gradinita.miniplay@gmail.com</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl">
-                        <div class="w-12 h-12 bg-mini-yellow text-mini-dark rounded-full flex items-center justify-center text-xl shrink-0 shadow-sm"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-mini-yellow text-mini-dark rounded-full flex items-center justify-center text-lg md:text-xl shrink-0 shadow-sm"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <h4 class="font-bold text-mini-dark text-sm uppercase tracking-wider">Adresa</h4>
-                            <p class="text-slate-700 font-bold">Str. Maica Tereza, nr.29<br>Popești-Leordeni, Jud. Ilfov</p>
+                            <h4 class="font-bold text-mini-dark text-xs md:text-sm uppercase tracking-wider">Adresa</h4>
+                            <p class="text-slate-700 font-bold text-sm md:text-base">Str. Maica Tereza, nr.29<br>Popești-Leordeni, Jud. Ilfov</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden shadow-sm border-2 border-slate-100 flex-grow h-64 min-h-[250px]">
+                <div class="rounded-2xl overflow-hidden shadow-sm border-2 border-slate-100 flex-grow h-48 md:h-64 min-h-[200px]">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.5719277702833!2d26.149115843577555!3d44.37836249396719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fddd8c2a53d1%3A0xe4b55f9db53dc572!2sStrada%20Maica%20Tereza%2029%2C%20077160%20Pope%C8%99ti-Leordeni%2C%20Rom%C3%A2nia!5e1!3m2!1sro!2sus!4v1771921871545!5m2!1sro!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
             <div class="flex flex-col justify-center h-full">
-                <div class="bg-mini-bg p-8 rounded-3xl border border-slate-100 shadow-inner h-full flex flex-col justify-center">
-                    <h3 class="text-2xl font-display font-extrabold text-mini-dark mb-6">Trimite-ne un mesaj rapid</h3>
+                <div class="bg-mini-bg p-6 md:p-8 rounded-3xl border border-slate-100 shadow-inner h-full flex flex-col justify-center">
+                    <h3 class="text-2xl font-display font-extrabold text-mini-dark mb-6 text-center md:text-left">Trimite-ne un mesaj rapid</h3>
                     <form class="space-y-4 font-sans flex flex-col flex-grow">
-                        <input type="text" placeholder="Numele Părintelui" class="w-full p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-mini-dark bg-white transition-all">
-                        <input type="tel" placeholder="Telefon" class="w-full p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-mini-dark bg-white transition-all">
-                        <select class="w-full p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-slate-500 bg-white cursor-pointer transition-all">
+                        <input type="text" placeholder="Numele Părintelui" class="w-full p-3 md:p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-mini-dark bg-white transition-all">
+                        <input type="tel" placeholder="Telefon" class="w-full p-3 md:p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-mini-dark bg-white transition-all">
+                        <select class="w-full p-3 md:p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-slate-500 bg-white cursor-pointer transition-all">
                             <option disabled selected>Vârsta copilului (1.5 - 6 ani)</option>
                             <option>1.5 - 3 ani (Creșă)</option>
                             <option>3 - 6 ani (Grădiniță)</option>
                         </select>
-                        <textarea placeholder="Mesajul tău..." rows="4" class="w-full p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-mini-dark bg-white resize-none transition-all flex-grow"></textarea>
+                        <textarea placeholder="Mesajul tău..." rows="4" class="w-full p-3 md:p-4 rounded-xl border border-slate-200 focus:border-mini-teal focus:ring-1 focus:ring-mini-teal outline-none font-bold text-mini-dark bg-white resize-none transition-all flex-grow"></textarea>
                         
                         <button type="button" class="bg-mini-yellow text-mini-dark font-extrabold text-lg w-full py-4 rounded-xl hover:bg-yellow-400 transition-colors shadow-sm mt-2">
                             Trimite mesajul
@@ -444,19 +468,51 @@
         </div>
     </section>
 
-    <footer class="bg-mini-dark py-10 text-center font-bold text-white relative z-10">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <img src="logoo.png" alt="Miniplay Logo" class="h-12 w-auto bg-white rounded-full p-1">
-                <span class="font-display font-extrabold text-2xl text-white">Miniplay</span>
+    <footer class="bg-mini-dark pt-16 pb-6 text-white relative z-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12 text-center md:text-left">
+            
+            <div class="flex flex-col items-center md:items-start">
+                <img src="logo.png" alt="Miniplay Logo" class="h-16 w-auto bg-white rounded-2xl py-2 px-4 mb-6">
+                <p class="text-slate-300 font-semibold mb-4 max-w-xs text-sm md:text-base">
+                    Un mediu educațional premium, creat cu blândețe și atenție pentru viitorul micilor noștri exploratori.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-display font-extrabold text-2xl text-mini-yellow mb-5">Linkuri Utile</h4>
+                <ul class="space-y-3 font-semibold text-slate-300">
+                    <li><a href="#acasa" class="hover:text-white transition-colors">Acasă</a></li>
+                    <li><a href="#despre" class="hover:text-white transition-colors">De ce Miniplay?</a></li>
+                    <li><a href="#dezvoltare" class="hover:text-white transition-colors">Obiective de dezvoltare</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Programul Zilei</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-display font-extrabold text-2xl text-mini-yellow mb-5">Contact</h4>
+                <ul class="space-y-4 font-semibold text-slate-300 text-sm md:text-base">
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-phone-alt text-mini-teal w-5"></i> 0726 582 656
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-envelope text-mini-red w-5"></i> gradinita.miniplay@gmail.com
+                    </li>
+                    <li class="flex items-start justify-center md:justify-start gap-3">
+                        <i class="fas fa-map-marker-alt text-mini-yellow mt-1 w-5"></i>
+                        <span class="text-center md:text-left">Str. Maica Tereza, nr.29<br>Popești-Leordeni, Jud. Ilfov</span>
+                    </li>
+                </ul>
             </div>
             
-            <p class="text-slate-300 font-semibold">© 2026 Grădinița Miniplay. Toate drepturile rezervate.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 border-t border-slate-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-slate-400 font-semibold text-sm">© 2026 Grădinița Miniplay. Toate drepturile rezervate.</p>
             
-            <div class="flex items-center justify-center gap-2 text-slate-300 font-semibold">
+            <div class="flex items-center justify-center gap-2 text-slate-400 font-semibold text-sm">
                 Crafted in the clouds by 
                 <a href="https://sky.ro" target="_blank" rel="noopener">
-                    <img src="skyro.png" alt="sky.ro" class="h-6 inline-block hover:scale-110 transition-transform brightness-0 invert" onerror="this.style.display='none'">
+                    <img src="skyro.png" alt="sky.ro" class="h-6 inline-block hover:scale-110 transition-transform brightness-0 invert opacity-80 hover:opacity-100" onerror="this.style.display='none'">
                 </a>
             </div>
         </div>
