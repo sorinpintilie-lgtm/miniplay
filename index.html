@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -212,7 +213,7 @@
     <section id="acasa" class="pt-32 pb-20 px-4 min-h-[85vh] flex items-center">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center w-full">
             
-            <div class="w-full lg:w-1/2 flex flex-col z-10 text-center lg:text-left">
+            <div class="w-full lg:w-1/2 flex flex-col z-10 text-center lg:text-left" data-aos="fade-up" data-aos-delay="100">
                 
                 <h1 class="order-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-mini-dark leading-tight mb-6">
                     Aici creștem fericiți <br>și <span class="text-mini-teal">curajoși!</span>
@@ -243,7 +244,7 @@
                 </div>
             </div>
             
-            <div class="w-full lg:w-1/2 relative hidden lg:block px-4">
+            <div class="w-full lg:w-1/2 relative hidden lg:block px-4" data-aos="fade-up" data-aos-delay="300">
                 <img src="hero.webp" alt="Copii la Miniplay" class="img-rounded relative w-full max-w-lg mx-auto aspect-square z-10 transform rotate-2">
                 
                 <div class="absolute -bottom-4 -left-4 bg-white p-4 border border-slate-200 rounded-2xl shadow-lg z-20 flex items-center gap-3 transform -rotate-3 hover:rotate-0 transition-transform">
@@ -261,11 +262,11 @@
     </section>
 
     <section id="despre" class="py-20 px-4">
-        <div class="max-w-7xl mx-auto bg-mini-yellow p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-sm">
+        <div class="max-w-7xl mx-auto bg-mini-yellow p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-sm" data-aos="fade-up">
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full blur-3xl"></div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                     <h2 class="text-4xl md:text-5xl font-display font-extrabold text-mini-dark mb-6">De ce Miniplay?</h2>
                     
                     <div class="rounded-2xl p-6 space-y-4 md:bg-white md:border md:border-white md:shadow-sm">
@@ -287,7 +288,7 @@
                     </div>
                 </div>
 
-                <div class="relative h-[300px] md:h-[450px] w-full">
+                <div class="relative h-[300px] md:h-[450px] w-full" data-aos="fade-up" data-aos-delay="200">
                     <img src="cute-kids-holding-paintbrushes-colorful-gouache-ja-2026-01-06-00-27-14-utc.webp" alt="Joaca" class="img-rounded absolute top-0 left-0 w-2/3 h-64 z-10 transform -rotate-6 cursor-pointer" onclick="bringToFront(this, 10)">
                     
                     <img src="cute-little-children-making-beautiful-christmas-gr-2026-01-08-20-21-30-utc.webp" alt="Bucurie" class="img-rounded absolute bottom-0 right-0 w-2/3 h-64 z-20 transform rotate-6 cursor-pointer" onclick="bringToFront(this, 20)">
@@ -299,11 +300,11 @@
 
     <section id="dezvoltare" class="py-20 px-4 bg-mini-dark text-white relative mt-10">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-display font-extrabold text-mini-yellow text-center mb-16">O dezvoltare completă</h2>
+            <h2 class="text-4xl md:text-5xl font-display font-extrabold text-mini-yellow text-center mb-16" data-aos="fade-up">O dezvoltare completă</h2>
             
             <div class="grid lg:grid-cols-3 gap-8">
                 
-                <div class="bg-white text-mini-dark rounded-3xl p-6 transform hover:-translate-y-2 transition-transform flex flex-col shadow-lg border-b-8 border-mini-teal">
+                <div class="bg-white text-mini-dark rounded-3xl p-6 transform hover:-translate-y-2 transition-all duration-300 flex flex-col shadow-lg border-b-8 border-mini-teal" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-12 h-12 bg-mini-teal text-white rounded-full flex items-center justify-center text-xl shrink-0">
                             <i class="fas fa-running"></i>
@@ -317,7 +318,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-white text-mini-dark rounded-3xl p-6 transform hover:-translate-y-2 transition-transform flex flex-col shadow-lg border-b-8 border-mini-red">
+                <div class="bg-white text-mini-dark rounded-3xl p-6 transform hover:-translate-y-2 transition-all duration-300 flex flex-col shadow-lg border-b-8 border-mini-red" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-12 h-12 bg-mini-red text-white rounded-full flex items-center justify-center text-xl shrink-0">
                             <i class="fas fa-brain"></i>
@@ -333,7 +334,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-white text-mini-dark rounded-3xl p-6 transform hover:-translate-y-2 transition-transform flex flex-col shadow-lg border-b-8 border-yellow-400">
+                <div class="bg-white text-mini-dark rounded-3xl p-6 transform hover:-translate-y-2 transition-all duration-300 flex flex-col shadow-lg border-b-8 border-yellow-400" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-12 h-12 bg-yellow-400 text-white rounded-full flex items-center justify-center text-xl shrink-0">
                             <i class="fas fa-heart"></i>
@@ -356,7 +357,7 @@
     <section id="program" class="py-24 px-4 bg-white">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
             
-            <div class="flex flex-col">
+            <div class="flex flex-col" data-aos="fade-up" data-aos-delay="100">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="w-14 h-14 bg-mini-red text-white rounded-2xl flex items-center justify-center text-2xl shadow-sm">
                         <i class="fas fa-clock"></i>
@@ -446,12 +447,12 @@
     </section>
 
     <section id="contact" class="py-20 px-4 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto text-center mb-10">
+        <div class="max-w-7xl mx-auto text-center mb-10" data-aos="fade-up">
             <h2 class="text-4xl md:text-5xl font-display font-extrabold text-mini-dark mb-4">Hai să ne cunoaștem!</h2>
             <p class="text-lg font-semibold text-slate-600">Vino să vizitezi Grădinița Miniplay și să descoperi spațiul unde copilul tău va crește frumos.</p>
         </div>
         
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 shadow-lg border border-slate-100">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 shadow-lg border border-slate-100" data-aos="fade-up" data-aos-delay="100">
             <div class="flex flex-col space-y-6 md:space-y-8">
                 
                 <div class="space-y-4 md:space-y-6">
@@ -575,6 +576,14 @@
             } else {
                 header.style.top = 'calc(var(--promo-total) + 15px)';
             }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
         });
     </script>
 </body>
