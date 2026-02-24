@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = ""
+
+[dev]
+  command = "python -m http.server 8080"
+  targetPort = 8080
+  framework = "#default"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
